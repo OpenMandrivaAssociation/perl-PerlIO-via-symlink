@@ -1,8 +1,8 @@
 %define realname	PerlIO-via-symlink
-
+%define rel 3
 Name:		perl-%{realname}
 Version:	0.05
-Release:	2mdk
+Release:	%mkrel %rel
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Perl module that helps creating dynamic PerlIO layers
