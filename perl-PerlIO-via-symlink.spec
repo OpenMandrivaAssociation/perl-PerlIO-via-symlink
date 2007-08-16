@@ -1,5 +1,5 @@
 %define realname	PerlIO-via-symlink
-%define rel 3
+%define rel 4
 Name:		perl-%{realname}
 Version:	0.05
 Release:	%mkrel %rel
