@@ -1,23 +1,25 @@
-%define realname	PerlIO-via-symlink
-%define rel 5
-Name:		perl-%{realname}
-Version:	0.05
-Release:	%mkrel %rel
-License:	GPL or Artistic
-Group:		Development/Perl
+%define upstream_name	 PerlIO-via-symlink
+%define upstream_version 0.05
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Perl module that helps creating dynamic PerlIO layers
-Source0:	http://search.cpan.org/CPAN/authors/id/C/CL/CLKAO/%{realname}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{realname}/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	perl-devel
-BuildArch:      noarch
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	http://search.cpan.org/CPAN/authors/id/C/CL/CLKAO/%{upstream_name}-%{upstream_version}.tar.bz2
+
+BuildArch:  noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 PerlIO::via::dynamic is used for creating dynamic PerlIO layers.
 It is useful when the behavior of the layer depends on variables.
 
 %prep
-%setup -q -n %{realname}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -38,4 +40,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc README CHANGES
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
-
