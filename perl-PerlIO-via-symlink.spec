@@ -8,7 +8,7 @@ Release:	4
 Summary:	Perl module that helps creating dynamic PerlIO layers
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}/
+Url:		https://search.cpan.org/dist/%{upstream_name}/
 Source0:	http://search.cpan.org/CPAN/authors/id/C/CL/CLKAO/%{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires:	perl-devel
